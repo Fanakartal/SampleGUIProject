@@ -3,15 +3,10 @@ using System.Collections;
 
 public class GUIButtonController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () 
+    //public GameObject PlayGame;
+    
+    public void GetNextLevel(int nextScene)
     {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
-	}
+        Application.LoadLevel(nextScene);
+    }
 }
