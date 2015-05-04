@@ -21,18 +21,9 @@ public class ScoreChanger : MonoBehaviour {
 
     public void SaveScore()
     {
-
         PlayerPrefs.SetFloat("score", score);
-        
-        ////_Game.current = new _Game();
-        
-        //_Game.current.score = score;
-
-        //_SaveLoad.Save();
 
         Application.LoadLevel(0);
-
-        ////Debug.Log(_Game.current.score);
     }
 
     public void LoadScore()
@@ -40,8 +31,5 @@ public class ScoreChanger : MonoBehaviour {
         score = PlayerPrefs.GetFloat("score");
 
         slider.GetComponent<Slider>().value = score;
-        //_Game.current = new _Game();
-        //_SaveLoad.Load();
-        //slider.GetComponent<Slider>().value = _Game.current.score;
     }
 }
