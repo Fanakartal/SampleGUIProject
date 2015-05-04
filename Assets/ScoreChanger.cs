@@ -5,30 +5,43 @@ using UnityEngine.UI;
 public class ScoreChanger : MonoBehaviour {
 
     public GameObject slider;
-    float score;
+    public static float score;
 
+    void Awake()
+    {
+        if(PlayerPrefs.GetFloat("score") != 0.0f)
+            LoadScore();
+    }
+    
     public void changeScore()
     {
         score = slider.GetComponent<Slider>().value;
-        Debug.Log(score);
+        //Debug.Log(score);
     }
 
     public void SaveScore()
     {
-        _Game.current = new _Game();
-        
-        _Game.current.score = score;
 
-        _SaveLoad.Save();
+        PlayerPrefs.SetFloat("score", score);
+        
+        ////_Game.current = new _Game();
+        
+        //_Game.current.score = score;
+
+        //_SaveLoad.Save();
 
         Application.LoadLevel(0);
 
-        //Debug.Log(_Game.current.score);
+        ////Debug.Log(_Game.current.score);
     }
 
     public void LoadScore()
     {
-        _SaveLoad.Load();
-        slider.GetComponent<Slider>().value = _Game.current.score;
+        score = PlayerPrefs.GetFloat("score");
+
+        slider.GetComponent<Slider>().value = score;
+        //_Game.current = new _Game();
+        //_SaveLoad.Load();
+        //slider.GetComponent<Slider>().value = _Game.current.score;
     }
 }
