@@ -607,59 +607,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -25}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: .5, y: .5}
---- !u!1001 &1201400332
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-  m_RootGameObject: {fileID: 1499751084}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1499751084
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-  m_PrefabInternal: {fileID: 1201400332}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1499751086}
   - 114: {fileID: 1499751085}
+  - 114: {fileID: 1499751087}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -672,7 +629,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: adb37f660e6763f46ba88bcbee003a7e,
     type: 2}
-  m_PrefabInternal: {fileID: 1201400332}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499751084}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -684,7 +641,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: adb37f660e6763f46ba88bcbee003a7e, type: 2}
-  m_PrefabInternal: {fileID: 1201400332}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499751084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -692,6 +649,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1499751087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11483812, guid: adb37f660e6763f46ba88bcbee003a7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499751084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33633facd2a835438dea84e95dadf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 538719812}
 --- !u!1 &1791550144
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,12 +917,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 538719812}
-        m_MethodName: 
+      - m_Target: {fileID: 1499751087}
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
