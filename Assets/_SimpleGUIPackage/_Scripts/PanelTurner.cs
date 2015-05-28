@@ -9,8 +9,8 @@ public class PanelTurner : MonoBehaviour {
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        anim.Play("Idle");
+        //anim = GetComponent<Animator>();
+        //anim.Play("Idle");
     }
     
     /*public void Turner()
